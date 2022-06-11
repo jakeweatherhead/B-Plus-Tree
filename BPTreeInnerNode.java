@@ -6,8 +6,13 @@
 @SuppressWarnings("unchecked")
 class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<TKey, TValue> {
 	
-	protected Object[] references; 
+	protected Object[] references;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// constructor
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
+
 	public BPTreeInnerNode(int order) {
 		this.m = order;
 		// The strategy used here first inserts and then checks for overflow,
@@ -16,17 +21,21 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
 		this.references = new Object[m+1];
 	}
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // getChild
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
+
 	public BPTreeNode<TKey, TValue> getChild(int index) {
 		return (BPTreeNode<TKey, TValue>)this.references[index];
 	}
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // setChild
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 	public void setChild(int index, BPTreeNode<TKey, TValue> child) {
 		this.references[index] = child;
@@ -34,6 +43,7 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
 			child.setParent(this);
     }
 	}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // isLeaf
@@ -51,8 +61,7 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * @dev
-   * Throughout the program, there is the upBoundPacket object.
+   * @dev Throughout the program, there is the upBoundPacket object.
    * It is is used to convey information to higher levels of the 
    * B+ Tree whenever a change has been made in a lower level that
    * will affect the structure of the tree higher up. If a change 
@@ -104,12 +113,11 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * Deletion always occurs at the leaf-level in a B+ Tree.
+   * @dev Deletion always occurs at the leaf-level in a B+ Tree.
    * This deletion function, first, aims to get down to the
    * sequence set, and then processes any up-bound information
    * that might affect the structure of index set.
    */
-
 
   public BPTreeNode<TKey, TValue> delete(TKey key) {
 
@@ -233,7 +241,7 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
     BPTreeInnerNode<TKey, TValue> upBoundPacket = new BPTreeInnerNode<TKey, TValue>(this.m);
     BPTreeInnerNode<TKey, TValue> newNode = new BPTreeInnerNode<TKey, TValue>(this.m);
 
-    // Prepare middle key to be sent to higher layer
+    // Prepare middle key to be sent to higher level
     int middleIndex = (int)Math.floor(this.m / 2);
     upBoundPacket.keys[0] = this.keys[middleIndex];
     upBoundPacket.keyTally++;
@@ -323,8 +331,8 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * A merge has occurred with a leaf node and its left sibling.
-   * This function deletes the stale, leftover separator key in the index set.
+   * @dev A merge has occurred with a leaf node and its left sibling.
+   * @dev This function deletes the stale, leftover separator key in the index set.
    * @param referenceNode - information node used to identify stale separator.
    */
 
@@ -346,8 +354,8 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * A merge has occurred with a leaf node and its right sibling.
-   * This function deletes the stale, leftover separator key in the index set.
+   * @dev A merge has occurred with a leaf node and its right sibling.
+   * @dev This function deletes the stale, leftover separator key in the index set.
    * @param referenceNode - information node used to identify stale separator.
    */
 
