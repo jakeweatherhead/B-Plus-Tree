@@ -1,10 +1,9 @@
 /**
- * Class for a B+ tree
- * Since the structures and behaviours between internal nodes and leaf nodes are
- * different,
- * there are different classes for each kind of node. However, both classes
- * share attributes in
- * a common parent node class.
+ * @dev Class for a B+ tree. Since the structures and behaviours between
+ *      internal nodes and
+ *      leaf nodes are different,there are different classes for each kind of
+ *      node. However,
+ *      both classes share attributes in a common parent node class.
  * 
  * @param <TKey>   the data type of the key
  * @param <TValue> the data type of the value
