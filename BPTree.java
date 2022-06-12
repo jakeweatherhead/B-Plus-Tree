@@ -5,7 +5,7 @@
  *      node. However,
  *      both classes share attributes in a common parent node class.
  * 
- * @param <TKey>   the data type of the key
+ * @param <TKey> the data type of the key
  * @param <TValue> the data type of the value
  */
 public class BPTree<TKey extends Comparable<TKey>, TValue> {
