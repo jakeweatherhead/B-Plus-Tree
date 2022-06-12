@@ -30,8 +30,8 @@ public class Main {
 
   private static void test() {
 
-		System.out.println("------------------------------------- Test -------------------------------------");
-		BPTree<Integer, Integer> testTree = new BPTree<Integer, Integer>(3);
+    System.out.println("------------------------------------- Test -------------------------------------");
+    BPTree<Integer, Integer> testTree = new BPTree<Integer, Integer>(3);
     ArrayList<Integer> keys = new ArrayList<Integer>();
     ArrayList<Integer> keySafe = new ArrayList<Integer>(); // Stores inserted keys for future reference
     ArrayList<Integer> deleteList = new ArrayList<Integer>();
@@ -42,8 +42,8 @@ public class Main {
     // Manual Review Section
     ////////////////////////////////////////////////////////
 
-    int[] insertOrder = { 332,172,497,851,925,222,897,95,467,844};
-    int[] deleteOrder = { 467,851,172,897,844};//,925,497,222,95,332};
+    int[] insertOrder = { 332, 172, 497, 851, 925, 222, 897, 95, 467, 844 };
+    int[] deleteOrder = { 467, 851, 172, 897, 844 };// ,925,497,222,95,332};
 
     for (int i = 0; i < insertOrder.length; i++) {
       values.add(i * 2);
@@ -57,7 +57,7 @@ public class Main {
       System.out.println("Delete " + deleteOrder[j]);
       testTree.delete(deleteOrder[j]);
       testTree.print();
-    } 
+    }
 
     ////////////////////////////////////////////////////////
     // Automatic Testing Section (Rudimentary Fuzzer)
@@ -66,11 +66,11 @@ public class Main {
     // Generate random list of keys to insert
     int numInserts = random.nextInt(20);
     for (int j = 0; j < numInserts; j++) {
-      int randKey = 1 + (int)(Math.random() * ((1000 - 1) + 1));
+      int randKey = 1 + (int) (Math.random() * ((1000 - 1) + 1));
       keySafe.add(randKey);
       keys.add(randKey);
     }
-    
+
     // Insert data into tree
     for (int i = 0; i < keys.size(); i++) {
       testTree.insert(keys.get(i), i * 5);
@@ -101,7 +101,7 @@ public class Main {
     printInsertOrder(keySafe);
     printDeleteOrder(deleteList);
     System.out.println("---------------------------------");
-	}
+  }
 
   public static void main(String[] args) {
     test();
