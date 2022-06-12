@@ -82,7 +82,7 @@ public class BPTree<TKey extends Comparable<TKey>, TValue> {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * Delete a key and its associated value from the B+ tree.
+   * @dev Delete a key and its associated value from the B+ tree.
    */
   public void delete(TKey key) {
     if (root != null) {
@@ -95,7 +95,7 @@ public class BPTree<TKey extends Comparable<TKey>, TValue> {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * Return all associated key values on the B+ tree in ascending key order.
+   * @dev Return all associated key values on the B+ tree in ascending key order.
    */
   public TValue[] values() {
     if (root != null) {
