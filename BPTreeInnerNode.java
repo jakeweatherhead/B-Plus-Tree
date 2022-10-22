@@ -93,9 +93,8 @@ class BPTreeInnerNode<TKey extends Comparable<TKey>, TValue> extends BPTreeNode<
     }
 
     // This node is full after insertion
-    if (this.keyTally == this.m) {
+    if (this.keyTally == this.m)
       return this.splitNode();
-    }
 
     // This node is not full after insertion
     this.linkParentToChild();
