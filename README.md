@@ -1,4 +1,4 @@
-![DATA](https://badgen.net/badge/:subject/:status/:green?icon=github)
+![DATA](https://badgen.net/badge/:subject/:status/:green?icon=coffee)
 
 This is an assignment from my 2nd year, Data Structures and Algorithms course at the University of Pretoria where we had to create
 a working B+ Tree program in Java. I completed it in approximately 3 days, and was 1 of 13 students in a class of 329 to get 100% for the project.
