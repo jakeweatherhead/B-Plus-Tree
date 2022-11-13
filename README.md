@@ -4,4 +4,4 @@ I think it would be cool to build this to a point of high theoretical accuracy a
 as the University of San Francisco's B+ Tree visualiser, or Visualgo's B+ Tree section. The nice thing about this
 assignment was that it was easy to test. I implemented a rudimentary blackbox fuzzer (see Main.java) which, largely, automated
 the testing process. From there, it was just a matter of how many tests I could fit in before the deadline.
-# Awesome README [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
+[![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
