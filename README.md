@@ -1,4 +1,4 @@
-![DATA](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+![DATA](https://badgen.net/badge/:subject/:status/:green?icon=github)
 
 This is an assignment from my 2nd year, Data Structures and Algorithms course at the University of Pretoria where we had to create
 a working B+ Tree program in Java. I completed it in approximately 3 days, and was 1 of 13 students in a class of 329 to get 100% for the project.
