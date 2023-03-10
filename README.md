@@ -4,4 +4,4 @@
 
 Task: create a working B+ Tree program that could handle insertions and deletions from an unseen data set of arbitrary length. <br>
 
-I implemented a blackbox fuzzer (see Main.java) which largely automated the testing process and allowed me to quickly identify bugs. Error-causing test cases were then transferred over to manual-review (again, see Main.Java) where I stepped through the execution path line-by-line.
+I implemented a blackbox fuzzer (see Main.java) which largely automated the testing process and allowed me to quickly identify bugs. Error-causing test cases were then transferred over to manual-review (again, see Main.java) where I stepped through the execution path line-by-line.
