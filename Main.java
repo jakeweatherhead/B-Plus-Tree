@@ -60,7 +60,7 @@ public class Main {
     }
 
     ////////////////////////////////////////////////////////
-    // Automatic Testing Section (Rudimentary Fuzzer)
+    // Blackbox Fuzzer (Automatic Testing)
     ////////////////////////////////////////////////////////
 
     // Generate random list of keys to insert
